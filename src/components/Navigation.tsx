@@ -1,4 +1,4 @@
-export default function Navigation({ route }) {
+export default function Navigation({ route }: { route: number }) {
     const navigationClass = {
         selected: "mx-4 -mb-4 after:inline-block after:w-full after:h-1.5 after:bg-yellow-300 after:rounded-full after:transition-all after:duration-300 leading-4 cursor-default",
         default: "mx-4 -mb-4 after:inline-block after:w-full after:h-1.5 after:bg-gray-200 after:rounded-full after:mt-0.5 after:-mb-0.5 after:opacity-0 after:transition-all after:duration-300 leading-4 cursor-pointer"
