@@ -1,6 +1,6 @@
 
+import Link from 'next/link';
 import MulaiButton from '@/src/components/Mulai';
-import { FaArrowRight } from 'react-icons/fa';
 
 export default function Navigation({ route }: { route: number }) {
     const navigationClass = {
@@ -13,11 +13,11 @@ export default function Navigation({ route }: { route: number }) {
           <h1 className="text-3xl lg:text-4xl font-bold">ethic<span className="text-yellow-300">ally</span>.</h1>
 
           <div className="hidden lg:flex w-full justify-end items-center flex-row text-lg font-medium">
-            <a href={route === 1 ? "" : "/"} className={route === 1 ? navigationClass.selected : navigationClass.default}>Home</a>
-            <a href={route === 2 ? "" : "/learn"} className={route === 2 ? navigationClass.selected : navigationClass.default}>Learn</a>
-            <a href={route === 3 ? "" : "/about"} className={route === 3 ? navigationClass.selected : navigationClass.default}>About</a>
-            <a href="http://otn2023.fun" className={navigationClass.default + " mr-8"}>OTN 2023</a>
-            <MulaiButton userIcon={true} />
+            <Link href={route === 1 ? "" : "/"} className={route === 1 ? navigationClass.selected : navigationClass.default}>Home</Link>
+            <Link href={route === 2 ? "" : "/learn"} className={route === 2 ? navigationClass.selected : navigationClass.default}>Learn</Link>
+            <Link href={route === 3 ? "" : "/about"} className={route === 3 ? navigationClass.selected : navigationClass.default}>About</Link>
+            <Link href="http://otn2023.fun" className={navigationClass.default + " mr-8"}>OTN 2023</Link>
+            <MulaiButton navigation={true} />
           </div>
         </nav>
     )

@@ -1,8 +1,4 @@
-"use client";
-
 import Image from 'next/image';
-
-import { FaArrowRight } from 'react-icons/fa';
 
 import Navigation from '@/src/components/Navigation';
 import Footer from '@/src/components/Footer';
