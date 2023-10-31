@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { useState, useEffect, useRef } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useRouter } from 'next/navigation';
-import { FaArrowRight, FaUserCircle, FaCheckCircle, FaCheck } from 'react-icons/fa';
+import { FaArrowRight, FaUserCircle, FaCheckCircle } from 'react-icons/fa';
 
 type ButtonType = {
     navigation?: boolean
@@ -33,11 +33,13 @@ export default function MulaiButton({ navigation = false, ...props } : ButtonTyp
             if (nama && nama !== "") {
                 setLoggedIn(true);
                 Swal.fire({
-                    title: "Popup Semetara",
+                    title: "Popup Sementara",
                     text: "Apakah kamu yakin ingin logout?",
                     icon: "warning",
                     confirmButtonText: 'Logout',
                     showCancelButton: true,
+                    confirmButtonColor: "#fcd34d",
+                    iconColor: "#fcd34d",
                 }).then((result) => {
                     if (result.isConfirmed) {
                         localStorage.removeItem("nama");
@@ -58,7 +60,7 @@ export default function MulaiButton({ navigation = false, ...props } : ButtonTyp
                         </>
                     ),
 
-                    icon: "warning", 
+                    icon: "info", 
                     input: 'text',
                     confirmButtonText: 'Lanjut',
                     cancelButtonText: 'Kembali',
@@ -86,7 +88,8 @@ export default function MulaiButton({ navigation = false, ...props } : ButtonTyp
                                 <>
                                 <span className="text-2xl inline-block mb-4 font-bold">Halo, {nama.includes(' ') ? nama.split(' ')[0] : nama}!</span>
                                 <br/>
-                                <p className="font-medium">
+                                <div className="w-full flex justify-center">
+                                <p className="font-medium max-w-sm">
                                     <span className="mb-1 inline-block">
                                         Selamat datang di&nbsp;
                                         <span className="font-['Poppins'] font-bold">
@@ -94,14 +97,13 @@ export default function MulaiButton({ navigation = false, ...props } : ButtonTyp
                                         </span>
                                     </span>
                                     <br/>
-                                    Ayo mulai menjadi remaja yang beretika
-                                    <br/>
-                                    baik dalam berinternet!
+                                    Ayo mulai menjadi remaja yang beretika baik dalam berinternet!
                                 </p>
+                                </div>
                                 </>
                             ),
         
-                            icon: "warning", 
+                            icon: "question", 
                             confirmButtonText: 'Mulai',
                             confirmButtonColor: "#fcd34d",
                             iconColor: "#fcd34d",
