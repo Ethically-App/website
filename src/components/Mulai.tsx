@@ -8,10 +8,11 @@ import { FaArrowRight, FaUserCircle, FaCheckCircle } from 'react-icons/fa';
 
 type ButtonType = {
     navigation?: boolean
+    simple?: boolean
     style?: object
 }
 
-export default function MulaiButton({ navigation = false, ...props } : ButtonType) {
+export default function MulaiButton({ navigation = false, simple = false, ...props } : ButtonType) {
     const router = useRouter();
     const [loggedIn, setLoggedIn] = useState<boolean>(false);
     const ref1 = useRef<HTMLAnchorElement>(null);
@@ -19,6 +20,7 @@ export default function MulaiButton({ navigation = false, ...props } : ButtonTyp
 
     const classes = {
         default: 'mulai p-3 px-6 bg-amber-300 rounded-full text-white text-xl font-semibold shadow-lg hover:bg-yellow-300 hover:shadow-xl transition-all duration-300 cursor-pointer ',
+        simple: 'mulai bg-amber-300 w-full flex justify-center items-center block text-white font-medium shadow-md rounded-full my-4 p-2 px-4 hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 cursor-pointer',
         transition: 'animate fadeIn',
     };
 
@@ -121,12 +123,20 @@ export default function MulaiButton({ navigation = false, ...props } : ButtonTyp
     return (
         loggedIn ? (
             navigation ? (
-                <a ref={ref1} className={classes.default} {...props} >Dasbor<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+                simple ? (
+                    <a ref={ref2} className={classes.simple + (navigation ? "" : classes.transition)} {...props} >Dasbor<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+                ) : (
+                    <a ref={ref1} className={classes.default} {...props} >Dasbor<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+                )
             ) : (
                 <a ref={ref1} className={classes.default} {...props} >Dasbor<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
             )
         ) : (
-            <a ref={ref2} className={classes.default + (navigation ? "" : classes.transition)} {...props} >Mulai<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+            simple ? (
+                <a ref={ref2} className={classes.simple + (navigation ? "" : classes.transition)} {...props} >Mulai<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+            ) : (
+                <a ref={ref2} className={classes.default + (navigation ? "" : classes.transition)} {...props} >Mulai<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+            )
         )
     )
 }

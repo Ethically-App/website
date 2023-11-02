@@ -17,7 +17,7 @@ export default function Home() {
         <>
             <Navigation route={1} />
 
-            <section id="header" className="bg-amber-100/40 w-full mt-16 sm:mt-24 px-8 sm:px-32 xl:px-40 py-28 flex justify-center items-center flex-col-reverse lg:flex-row">
+            <section id="header" className="bg-amber-100/40 w-full mt-16 lg:mt-24 px-8 sm:px-32 xl:px-40 py-28 flex justify-center items-center flex-col-reverse lg:flex-row">
                 <div className="w-full lg:w-1/2 text-center lg:text-left">
                     <h1 className="text-2xl md:text-3xl xl:text-[2.8rem] animate fadeInDown font-bold xl:leading-normal mb-4">Yuk Jadi Orang Beretika Dalam Berinternet!</h1>
                     <p className="text-lg lg:text-xl xl:text-2xl mb-12 animate fadeInDown" style={{animationDelay: "0.2s"}}>Jadilah remaja yang <b>beretika baik</b> dalam menggunakan media sosial dan internet!</p>
