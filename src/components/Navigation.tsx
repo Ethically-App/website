@@ -5,7 +5,11 @@ import { useState, useEffect, useRef } from 'react';
 import { FaBars } from 'react-icons/fa';
 import MulaiButton from '@/src/components/Mulai';
 
-export default function Navigation({ route }: { route: number }) {
+type PageNumber = {
+    route: 0 | 1 | 2 | 3
+}
+
+export default function Navigation({ route }: PageNumber) {
     const [open, setOpen] = useState<boolean>(false);
     const menuMobileRef = useRef<HTMLDivElement>(null);
 
@@ -41,7 +45,7 @@ export default function Navigation({ route }: { route: number }) {
           <div className="bg-white w-full py-6 px-12 lg:px-28 flex justify-start items-center flex-row">
             <h1 className="text-3xl lg:text-4xl font-bold">ethic<span className="text-yellow-300">ally</span>.</h1>
 
-            <div className="hidden lg:flex w-full justify-end items-center flex-row text-lg font-medium">
+            <div className={"hidden w-full justify-end items-center flex-row text-lg font-medium " + (route == 0 ? "" : "lg:flex")}>
               <Link href={route === 1 ? "" : "/"} className={route === 1 ? navigationClass.selected : navigationClass.default}>Home</Link>
               <Link href={route === 2 ? "" : "/learn"} className={route === 2 ? navigationClass.selected : navigationClass.default}>Learn</Link>
               <Link href={route === 3 ? "" : "/about"} className={route === 3 ? navigationClass.selected : navigationClass.default}>About</Link>
