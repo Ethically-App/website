@@ -1,13 +1,7 @@
 
 import Navigation from '@/src/components/Navigation';
 
-type Params = {
-    params: { 
-        nama: string
-    }
-}
-
-export default function Materi({ params }: Params) {
+export default function Materi() {
     return (
         <>
             <Navigation route={0} />
