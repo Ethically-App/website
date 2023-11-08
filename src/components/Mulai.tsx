@@ -36,7 +36,7 @@ export default function MulaiButton({ navigation = false, simple = false, ...pro
                 setLoggedIn(true);
                 Swal.fire({
                     title: "Popup Sementara",
-                    text: "Apakah kamu yakin ingin logout?",
+                    text: "wtf are you",
                     icon: "warning",
                     confirmButtonText: 'Logout',
                     showCancelButton: true,

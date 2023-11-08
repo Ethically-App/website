@@ -6,7 +6,7 @@ import { FaBars } from 'react-icons/fa';
 import MulaiButton from '@/src/components/Mulai';
 
 type PageNumber = {
-    route: 0 | 1 | 2 | 3
+    route: 0 | 1 | 2 | 3 | 4
 }
 
 export default function Navigation({ route }: PageNumber) {
@@ -62,6 +62,7 @@ export default function Navigation({ route }: PageNumber) {
               <Link href={route === 1 ? "" : "/"} className={route === 1 ? navigationClassMobile.selected : navigationClassMobile.default}>Home</Link>
               <Link href={route === 2 ? "" : "/learn"} className={route === 2 ? navigationClassMobile.selected : navigationClassMobile.default}>Learn</Link>
               <Link href={route === 3 ? "" : "/about"} className={route === 3 ? navigationClassMobile.selected : navigationClassMobile.default}>About</Link>
+              <Link href={route === 4 ? "" : "/cyberbullying"} className={route === 4 ? navigationClassMobile.selected : navigationClassMobile.default}>cyberbullying</Link>
               <Link href="http://otn2023.fun" className={navigationClassMobile.default + " mr-8"}>OTN 2023</Link>
               <MulaiButton navigation={true} simple={true} />
           </div>
