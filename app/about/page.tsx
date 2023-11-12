@@ -9,8 +9,7 @@ export default function Home() {
       <Navigation route={3} />
       <section className="bg-white">
       <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16">
-  {/* Individual Team Member Components in a single column */}
-  <div className="flex justify-center items-center">
+  <div className="flex justify-center items-center mt-16">
     <TeamMemberCard
       imageSrc="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
       name="Nevan Artwin"
@@ -26,33 +25,22 @@ export default function Home() {
       introduction="Hi,  こんにちは! Aku Royyan Ahmad Zaydan atau biasa dipanggil Royyan. Aku berasal dari Surabaya, Saat ini aku bersekolah di SMK RUS Kudus, dan tertarik tentang web design, dan graphic design"
     />
   </div>
-  <div className="flex justify-center items-center">
+  <div className="flex justify-center items-center mb-10">
     <TeamMemberCard
       imageSrc="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto.format&fit=crop&w=880&q=80"
       name="Alikha Mutiara H."
       role="Developer"
-      introduction="Yooo! Aku Alikha Mutiara Hati atau lebih suka dipanggil Alikha. Aku dari Tuban nih, sedang bersekolah sekolah di SMK RUS Kudus. Aku tertarik banget sama web development."
+      introduction="Yoooo! Aku Alikha Mutiara Hati, temen-temen biasanya manggil aku Alikha. Aku berasal dari Tuban, namun sedang bersekolah di SMK Raden Umar Said Kudus. Obsesiku di dunia web development sungguh besar!"
     />
   </div>
-  {/* ... Add more team members here */}
 </div>
 
       </section>
       <Footer/>
-      {/* Add Footer and other components */}
     </>
   );
 }
 
-// Rest of your code
-
-// Team Member Card Component with image centered to the left
-// Rest of your code
-
-// Team Member Card Component with increased height
-// Rest of your code
-
-// Team Member Card Component with custom width and increased height
 function TeamMemberCard({
   imageSrc,
   name,
