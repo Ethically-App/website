@@ -4,7 +4,7 @@ import Navbar from '../../components/navbar';
 import Next from '../../components/next';
 
 
-export default function Cyberbullying() {
+export default function Cyberbullying1() {
     return (
         <>
         <Navbar route={0}/>
