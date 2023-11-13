@@ -1,6 +1,6 @@
 "use client";
 
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft } from 'react-icons/fa';
 type ButtonType = {
     text: string,
     white?: boolean,
@@ -9,7 +9,7 @@ type ButtonType = {
     href?: string,
 }
 
-export default function NextButton({ text, simple = false, white = false, href = "", ...props } : ButtonType) {
+export default function BackButton({ text, simple = false, white = false, href = "", ...props } : ButtonType) {
     const classes = {
         default: 'p-2 px-6 bg-amber-300 rounded-full text-white text-lg font-medium shadow-lg hover:bg-yellow-300 hover:shadow-xl transition-all duration-300 cursor-pointer ',
         simple: 'bg-amber-300 flex justify-center items-center block text-white shadow-md rounded-full p-2 px-4 hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 cursor-pointer'
@@ -23,11 +23,11 @@ export default function NextButton({ text, simple = false, white = false, href =
     return (
         white ? (
             <a href={href} className={simple ? whites.simple : whites.default} {...props}>
-                {text}<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" />
+                <FaArrowLeft className="inline-block mr-3 -mt-0.5 transition-all" />{text}
             </a>
         ) : (
             <a href={href} className={simple ? classes.simple : classes.default} {...props}>
-                {text}<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" />
+                <FaArrowLeft className="inline-block mr-3 -mt-0.5 transition-all" />{text}
             </a>
         )
     )
