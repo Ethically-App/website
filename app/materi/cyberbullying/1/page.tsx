@@ -1,13 +1,11 @@
-import Navigation from '@/src/components/Navigation';
 import React from 'react';
-import Navbar from '../../components/navbar';
-import Next from '../../components/next';
+import Navigation from '@/src/components/MateriNav';
 
 
 export default function Cyberbullying1() {
     return (
         <>
-        <Navbar/>
+        <Navigation nama={'cyberbullying'} next={'2'} />
         <section className="relative z-[2] bg-white w-full h-full px-8 sm:px-32 xl:px-40 py-28 flex justify-start items-center flex-col lg:flex-row ">
     
         <div className="w-full lg:w-1/2 text-center lg:text-left">
