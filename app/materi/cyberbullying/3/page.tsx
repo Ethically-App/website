@@ -15,7 +15,7 @@ export default function Cyberbullying2() {
             <ol className={'inline-block ml-3 lg:ml-8 list-decimal text-left'}>
                 <li>Kecemasan, depresi, dan stress</li>
                 <li>Hilang harga diri</li>
-                <li>Menjadi benci pada diri sendiri, bahkan bisa bun*h diri!</li>
+                <li>Menjadi benci pada diri sendiri, bahkan bisa <b>bun*h diri</b>!</li>
             </ol>
             <br /><br />
             Selain itu, dalam undang undang juga dijelaskan pada Pasal 28 ayat (2) UU ITE serta pasal hukumanya dan dapat dikenakan pidana penjara paling lama <b>6 (enam) tahun</b> dan/ atau denda paling banyak <b>Rp 1.000.000.000,00 (satu miliar rupiah)</b>!
