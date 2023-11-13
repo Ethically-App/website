@@ -23,11 +23,13 @@ export default function BackButton({ text, simple = false, white = false, href =
     return (
         white ? (
             <a href={href} className={simple ? whites.simple : whites.default} {...props}>
-                <FaArrowLeft className="inline-block mr-3 -mt-0.5 transition-all" />{text}
+                <FaArrowLeft className="inline-block md:mr-3 -mt-0.5 transition-all" />
+                <span className={'hidden md:inline'}>{text}</span>
             </a>
         ) : (
             <a href={href} className={simple ? classes.simple : classes.default} {...props}>
-                <FaArrowLeft className="inline-block mr-3 -mt-0.5 transition-all" />{text}
+                <FaArrowLeft className="inline-block md:mr-3 -mt-0.5 transition-all" />
+                <span className={'hidden md:inline'}>{text}</span>
             </a>
         )
     )

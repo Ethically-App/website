@@ -23,11 +23,13 @@ export default function NextButton({ text, simple = false, white = false, href =
     return (
         white ? (
             <a href={href} className={simple ? whites.simple : whites.default} {...props}>
-                {text}<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" />
+                <span className={'hidden md:inline'}>{text}</span>
+                <FaArrowRight className="inline-block md:ml-3 -mt-0.5 transition-all" />
             </a>
         ) : (
             <a href={href} className={simple ? classes.simple : classes.default} {...props}>
-                {text}<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" />
+                <span className={'hidden md:inline'}>{text}</span>
+                <FaArrowRight className="inline-block md:ml-3 -mt-0.5 transition-all" />
             </a>
         )
     )
