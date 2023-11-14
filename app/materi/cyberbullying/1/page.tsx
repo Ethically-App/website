@@ -20,9 +20,6 @@ export default function Cyberbullying1() {
         </div>
     </section>
     
-
-
-    
         </>
     )
 }

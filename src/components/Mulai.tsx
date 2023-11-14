@@ -84,7 +84,12 @@ export default function MulaiButton({ navigation = false, simple = false, ...pro
                         localStorage.setItem("nama", nama);
                         setLoggedIn(true);
 
-                        router.push("/materi");
+                        if (window.location.pathname == "/materi") {
+                            window.location.reload();
+                        } else {
+                            router.push("/materi");
+                        }
+
                         Swal.fire({
                             html: renderToStaticMarkup(
                                 <>

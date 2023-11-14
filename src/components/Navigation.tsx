@@ -47,7 +47,7 @@ export default function Navigation({ route }: PageNumber) {
 
             <div className={"hidden w-full justify-end items-center flex-row text-lg font-medium " + (route == 0 ? "" : "lg:flex")}>
               <Link href={route === 1 ? "" : "/"} className={route === 1 ? navigationClass.selected : navigationClass.default}>Home</Link>
-              <Link href={route === 2 ? "" : "/learn"} className={route === 2 ? navigationClass.selected : navigationClass.default}>Learn</Link>
+              <Link href={route === 2 ? "" : "/materi"} className={route === 2 ? navigationClass.selected : navigationClass.default}>Learn</Link>
               <Link href={route === 3 ? "" : "/about"} className={route === 3 ? navigationClass.selected : navigationClass.default}>About</Link>
               <Link href="http://otn2023.fun" className={navigationClass.default + " mr-8"}>OTN 2023</Link>
               <MulaiButton navigation={true} />
@@ -60,7 +60,7 @@ export default function Navigation({ route }: PageNumber) {
 
           <div className={"bg-white w-full h-full p-3 px-8 lg:hidden rounded-b transition-all duration-300 ease-out " + (open ? "block" : "hidden")}>
               <Link href={route === 1 ? "" : "/"} className={route === 1 ? navigationClassMobile.selected : navigationClassMobile.default}>Home</Link>
-              <Link href={route === 2 ? "" : "/learn"} className={route === 2 ? navigationClassMobile.selected : navigationClassMobile.default}>Learn</Link>
+              <Link href={route === 2 ? "" : "/materi"} className={route === 2 ? navigationClassMobile.selected : navigationClassMobile.default}>Learn</Link>
               <Link href={route === 3 ? "" : "/about"} className={route === 3 ? navigationClassMobile.selected : navigationClassMobile.default}>About</Link>
               <Link href={route === 4 ? "" : "/cyberbullying"} className={route === 4 ? navigationClassMobile.selected : navigationClassMobile.default}>cyberbullying</Link>
               <Link href="http://otn2023.fun" className={navigationClassMobile.default + " mr-8"}>OTN 2023</Link>
