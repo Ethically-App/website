@@ -1,7 +1,7 @@
 import Navigation from '@/src/components/MateriNav';
 import BulliedIcon from '@/src/components/icon/Bullied';
 
-export default function Cyberbullying2() {
+export default function Cyberbullying3() {
     return (
         <>
         <Navigation nama={'cyberbullying'} back={'2'} next={'4'} />
@@ -12,7 +12,7 @@ export default function Cyberbullying2() {
             <p className="lg:txt-lg xl:text-xl animate fadeInDown" style={{animationDelay: "0.2s"}}>
             Walaupun mungkin terlihat hanya <u>masalah kecil</u>, diam diam Cyberbullying juga dapat menimbulkan <b>dampak buruk</b> yang tidak kita sadari bagi korban yang dibully, seperti:
             <br /><br />
-            <ol className={'inline-block ml-3 lg:ml-8 list-decimal text-left'}>
+            <ol className={'inline-block ml-4 lg:ml-8 list-decimal text-left'}>
                 <li>Kecemasan, depresi, dan stress</li>
                 <li>Hilang harga diri</li>
                 <li>Menjadi benci pada diri sendiri, bahkan bisa <b>bun*h diri</b>!</li>

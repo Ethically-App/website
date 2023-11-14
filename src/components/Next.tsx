@@ -1,5 +1,4 @@
-"use client";
-
+import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 type ButtonType = {
     text: string,
@@ -22,15 +21,15 @@ export default function NextButton({ text, simple = false, white = false, href =
 
     return (
         white ? (
-            <a href={href} className={simple ? whites.simple : whites.default} {...props}>
+            <Link href={href} className={simple ? whites.simple : whites.default} {...props}>
                 <span className={'hidden md:inline'}>{text}</span>
                 <FaArrowRight className="inline-block md:ml-3 -mt-0.5 transition-all" />
-            </a>
+            </Link>
         ) : (
-            <a href={href} className={simple ? classes.simple : classes.default} {...props}>
+            <Link href={href} className={simple ? classes.simple : classes.default} {...props}>
                 <span className={'hidden md:inline'}>{text}</span>
                 <FaArrowRight className="inline-block md:ml-3 -mt-0.5 transition-all" />
-            </a>
+            </Link>
         )
     )
 }

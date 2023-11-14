@@ -12,7 +12,7 @@ export default function Cyberbullying2() {
             <p className="lg:txt-lg xl:text-xl animate fadeInDown" style={{animationDelay: "0.2s"}}>
                 <b>Cyberbullying</b> sendiri banyak kita temukan di media sosial dan internet, Ciri - ciri cyberbullying contohnya:
                 <br /><br />
-                <ol className={'inline-block ml-3 lg:ml-8 list-decimal text-left'}>
+                <ol className={'inline-block ml-4 lg:ml-8 list-decimal text-left'}>
                     <li>Mengirim pesan ancaman di media sosial.</li>
                     <li>Mengujarkan kebencian dan penghinaan.</li>
                     <li>Menyebarkan konten yang mempermalukan.</li>

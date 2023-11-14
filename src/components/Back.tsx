@@ -1,15 +1,15 @@
-"use client";
-
+import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 type ButtonType = {
     text: string,
     white?: boolean,
     simple?: boolean,
     style?: object,
+    absolute?: boolean,
     href?: string,
 }
 
-export default function BackButton({ text, simple = false, white = false, href = "", ...props } : ButtonType) {
+export default function BackButton({ text, simple = false, white = false, absolute = false, href = "", ...props } : ButtonType) {
     const classes = {
         default: 'p-2 px-4 sm:px-6 bg-amber-300 rounded-full text-white text-lg font-medium shadow-lg hover:bg-yellow-300 hover:shadow-xl transition-all duration-300 cursor-pointer ',
         simple: 'bg-amber-300 flex justify-center items-center block text-white shadow-md rounded-full p-2 px-4 hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 cursor-pointer'
@@ -22,15 +22,15 @@ export default function BackButton({ text, simple = false, white = false, href =
 
     return (
         white ? (
-            <a href={href} className={simple ? whites.simple : whites.default} {...props}>
+            <Link href={href} className={(simple ? whites.simple : whites.default) + (absolute ? " absolute" : "")} {...props}>
                 <FaArrowLeft className="inline-block md:mr-3 -mt-0.5 transition-all" />
                 <span className={'hidden md:inline'}>{text}</span>
-            </a>
+            </Link>
         ) : (
-            <a href={href} className={simple ? classes.simple : classes.default} {...props}>
+            <Link href={href} className={(simple ? classes.simple : classes.default) + (absolute ? " absolute" : "")} {...props}>
                 <FaArrowLeft className="inline-block md:mr-3 -mt-0.5 transition-all" />
                 <span className={'hidden md:inline'}>{text}</span>
-            </a>
+            </Link>
         )
     )
 }
