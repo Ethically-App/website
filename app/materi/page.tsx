@@ -14,47 +14,62 @@ import MulaiButton from '@/src/components/Mulai';
 import '@/src/styles/home.css';
 
 export default function Materi() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [name, setName] = useState<string>("");
 
     useEffect(() => {
         const nama = localStorage.getItem('nama');
         if (nama && nama != "") {
-            setIsLoggedIn(true);
+            setName(nama);
         } else {
-            setIsLoggedIn(false);
+            setName("");
         }
     }, []);
 
     return (
         <>
             <Navigation route={2} />
+            <section id="header" className="bg-amber-100/40 w-full mt-16 lg:mt-24 flex justify-center items-center flex-col">
+                <div className={'p-8 py-16 md:py-24 text-center'}>
+                    <h1 className={'text-2xl sm:text-3xl lg:text-4xl font-bold mb-2'}>
+                        Selamat datang {name != "" ? `, ${name.includes(' ') ? name.split(' ')[0] : name}!` : "!"}
+                    </h1>
+                    <p>Ayo mulai belajar untuk menjadi ber etika yang baik!</p>
+                </div>
+                
+                <div className={'w-full max-w-screen-lg px-8 pb-28 flex justify-center items-center flex-col md:grid md:grid-cols-2 gap-5'}>
+                    <MateriCard nama="Cyberbullying" href="/materi/cyberbullying/1">
+                        Cyberbullying adalah xxx
+                    </MateriCard>
 
-            
-            <section id="header" className="bg-white bg-[url('/bg.svg')] w-full mt-16 lg:mt-24 px-8 py-28 flex justify-center items-center grid lg:grid-cols-2 gap-4 shadow-md">
-                <MateriCard nama="Cyberbullying" href="/materi/cyberbullying/1" locked={!isLoggedIn} />
+                    <MateriCard nama="Doxxing" href="/materi/doxxing/1" delay=".2s">
+                        Doxxing adalah xxx
+                    </MateriCard>
 
-                <MateriCard nama="Doxxing" href="/materi/doxxing/1" locked={!isLoggedIn} />
+                    <MateriCard nama="Hate Speech" href="/materi/hatespeech/1" delay=".4s">
+                        Hate Speech adalah xxx
+                    </MateriCard>
 
-                <MateriCard nama="Hate Speech" href="/materi/hatespeech/1" locked={!isLoggedIn} />
-
-                <MateriCard nama="Hoax" href="/materi/hoax/1" locked={!isLoggedIn} />
+                    <MateriCard nama="Hoax" href="/materi/hoax/1" delay=".6s">
+                        Hoax adalah xxx
+                    </MateriCard>
+                </div>
             </section>
-
             <Footer />
         </>
     )
 }
 
 function MateriCard(
-    {nama, href, locked}: 
-    {nama: string, href: string, locked: boolean}
+    {children, nama, href, delay = ""}: 
+    {nama: string, href: string, delay?: string, children: React.ReactNode}
 ): JSX.Element {
     return (
-        <div className='rounded bg-white shadow-inner shadow-md border-x-64 lg:px-64 hover:shadow-xl duration-700 md:px-32 sm:px-24 py-24 flex justify-center flex-col'>
-            <b className='font-bold lg:text-3xl sm:text-xs md:text-lg text-center'>{nama}</b><br/>
-            <Link href={locked ? "/materi" : href} className={(locked ? "bg-zinc-400" : "bg-yellow-300 hover:bg-yellow-200 duration-700") + ' max-w-sm flex justify-center text-white py-4 px-8 rounded-md mt-4 margin-auto text-center lg:text-3xl sm:text-xs md:text-lg'}>
-                {locked ? (<FaLock/>) : "Mulai"}
-            </Link>
+        <div className='w-full rounded-xl bg-white shadow-md hover:shadow-lg p-8 py-8 md:py-16 flex justify-center items-center flex-col transition-all animate fadeInUp' style={{animationDelay: delay}}>
+            <h1 className='font-bold text-xl sm:text-2xl lg:text-3xl text-center mb-3'>{nama}</h1>
+            <p className={'text-base md:text-lg mb-8'}>{children}</p>
+            <div className={'scale-75 sm:scale-90'}>
+                <MulaiButton link={href} />
+            </div>
         </div>
     )
 }

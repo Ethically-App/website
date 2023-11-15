@@ -9,10 +9,11 @@ import { FaArrowRight, FaUserCircle, FaCheckCircle } from 'react-icons/fa';
 type ButtonType = {
     navigation?: boolean
     simple?: boolean
+    link?: string
     style?: object
 }
 
-export default function MulaiButton({ navigation = false, simple = false, ...props } : ButtonType) {
+export default function MulaiButton({ navigation = false, simple = false, link = "", ...props } : ButtonType) {
     const router = useRouter();
     const [loggedIn, setLoggedIn] = useState<boolean>(false);
     const ref1 = useRef<HTMLAnchorElement>(null);
@@ -34,21 +35,27 @@ export default function MulaiButton({ navigation = false, simple = false, ...pro
             let nama = localStorage.getItem("nama");
             if (nama && nama !== "") {
                 setLoggedIn(true);
-                Swal.fire({
-                    title: "Logout?",
-                    text: "Yaking mau keluar??",
-                    icon: "warning",
-                    confirmButtonText: 'Logout',
-                    showCancelButton: true,
-                    confirmButtonColor: "#fcd34d",
-                    iconColor: "#fcd34d",
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        localStorage.removeItem("nama");
-                        setLoggedIn(false);
-                        router.push("/");
-                    }
-                });
+
+                if (link != "") {
+                    router.push(link);
+
+                } else {
+                    Swal.fire({
+                        title: "Popup Sementara",
+                        text: "wtf are you",
+                        icon: "warning",
+                        confirmButtonText: 'Logout',
+                        showCancelButton: true,
+                        confirmButtonColor: "#fcd34d",
+                        iconColor: "#fcd34d",
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            localStorage.removeItem("nama");
+                            setLoggedIn(false);
+                            router.push("/");
+                        }
+                    });
+                }
 
             } else {
                 setLoggedIn(false);
@@ -76,6 +83,7 @@ export default function MulaiButton({ navigation = false, simple = false, ...pro
                         if (!nama || nama === "") Swal.showValidationMessage("Nama tidak boleh kosong!");
                         else if (!nama.match(/^[A-Za-z ]+$/)) Swal.showValidationMessage("Nama hanya boleh berisi huruf dan spasi!");
                         else if (nama.length < 3) Swal.showValidationMessage("Nama tidak boleh kurang dari 3 huruf!");
+                        else if (nama.length > 60) Swal.showValidationMessage("Nama tidak boleh lebih dari 60 huruf (so weird)");
                         else return nama;
                     }
                 }).then((result) => {
@@ -84,8 +92,9 @@ export default function MulaiButton({ navigation = false, simple = false, ...pro
                         localStorage.setItem("nama", nama);
                         setLoggedIn(true);
 
-                        if (window.location.pathname == "/materi") {
-                            window.location.reload();
+                        if (link != "") {
+                            router.push(link);
+
                         } else {
                             router.push("/materi");
                         }
@@ -126,15 +135,21 @@ export default function MulaiButton({ navigation = false, simple = false, ...pro
     }, []);
 
     return (
-        loggedIn ? (
-            navigation ? (
+        (loggedIn || link != "") ? (
+            (navigation || link != "") ? (
                 simple ? (
-                    <a ref={ref2} className={classes.simple + (navigation ? "" : classes.transition)} {...props} >Dasbor<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+                    <a ref={ref2} className={classes.simple + (navigation ? "" : classes.transition)} {...props} >
+                        {link != "" ? "Mulai" : "Dasbor"}
+                        <FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
                 ) : (
-                    <a ref={ref1} className={classes.default} {...props} >Dasbor<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+                    <a ref={ref1} className={classes.default} {...props} >
+                        {link != "" ? "Mulai" : "Dasbor"}
+                        <FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
                 )
             ) : (
-                <a ref={ref1} className={classes.default} {...props} >Dasbor<FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+                <a ref={ref1} className={classes.default} {...props} >
+                    {link != "" ? "Mulai" : "Dasbor"}
+                    <FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
             )
         ) : (
             simple ? (
