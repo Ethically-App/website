@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 import Navigation from "@/src/components/MateriNav";
 
-export default function CyberbullyingQuiz() {
+export default function HatespeechQuiz() {
   const router = useRouter();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function CyberbullyingQuiz() {
 
   return (
     <>
-      <Navigation nama={"cyberbullying"} back={"4"} />
+      <Navigation nama={"hatespeech"} back={"4"} />
       <section className="bg-[url('/bg.svg')] bg-cover bg-center relative z-[2] bg-white w-full h-full min-h-[95vh] px-8 sm:px-32 xl:px-40 py-28 flex justify-start items-center flex-col-reverse lg:flex-row"></section>
     </>
   );

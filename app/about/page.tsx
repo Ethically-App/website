@@ -1,10 +1,14 @@
+import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
+
 import Navigation from "@/src/components/Navigation";
 import Footer from "@/src/components/Footer";
-import MulaiButton from "@/src/components/Mulai";
+
 import "@/src/styles/home.css";
-import Royyan from "@/public/royyan.jpg"
-import Alikha from "@/public/alikha.jpg"
-import type { StaticImageData } from 'next/image';
+
+import Royyan from "@/src/assets/images/royyan.jpg";
+import Alikha from "@/src/assets/images/alikha.jpg";
+import Nevan from "@/src/assets/images/nevan.jpg";
 
 export default function Home() {
   return (
@@ -14,7 +18,7 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16">
           <div className="flex justify-center items-center mt-16 px-8">
             <TeamMemberCard
-              imageSrc="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+              image={Nevan}
               name="Nevan Artwin P. H."
               role="Leader"
               introduction="Salken! Kenalin aku Nevan Artwin Pratama Hidayat, atau dipanggil Nevan.  Aku adalah salah satu pelajar SMK RUS Kudus,, sama seperti Royyan dan Alikha. Hobiku adalah lebih membuat web dan desain juga memberikan ide, maka dari itu aku disini sebagai Team Leader dalam web ethically."
@@ -22,7 +26,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center px-8">
             <TeamMemberCard
-              imageSrc={Royyan}
+              image={Royyan}
               name="Royyan Ahmad Z."
               role="Designer"
               introduction="Hi,  こんにちは! Aku Royyan Ahmad Zaydan atau biasa dipanggil Royyan. Aku berasal dari Surabaya, Saat ini aku bersekolah di SMK RUS Kudus, dan tertarik tentang web design, dan graphic design"
@@ -30,7 +34,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center px-8 mb-10">
             <TeamMemberCard
-              imageSrc={Alikha}
+              image={Alikha}
               name="Alikha Mutiara H."
               role="Developer"
               introduction="Yoooo! Aku Alikha Mutiara Hati, teman-teman biasanya manggil aku Alikha. Aku berasal dari Tuban, namun sedang bersekolah di SMK Raden Umar Said Kudus. Aku juga memiliki passion di dunia web development!"
@@ -44,12 +48,12 @@ export default function Home() {
 }
 
 function TeamMemberCard({
-  imageSrc,
+  image,
   name,
   role,
   introduction,
 }: {
-  imageSrc: string | StaticImageData;
+  image: StaticImageData;
   name: string;
   role: string;
   introduction: string;
@@ -57,9 +61,9 @@ function TeamMemberCard({
   return (
     <div className="w-full max-w-screen-lg bg-white p-8 md:px-12 lg:px-16 border shadow-lg rounded-xl group">
       <div className="flex items-center flex-col md:flex-row h-full">
-        <img
+        <Image
           className="object-cover w-52 h-52 rounded-full border border-[#FDD752] border-8"
-          src={typeof imageSrc === 'string' ? imageSrc : imageSrc.src}
+          src={image}
           alt={name}
         />
         <div className="mt-8 md:mt-0 md:ml-8 flex-1">
