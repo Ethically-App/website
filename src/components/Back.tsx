@@ -5,6 +5,7 @@ type ButtonType = {
     white?: boolean,
     simple?: boolean,
     style?: object,
+    className?: string,
     absolute?: boolean,
     href?: string,
 }
