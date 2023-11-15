@@ -2,6 +2,9 @@ import Navigation from "@/src/components/Navigation";
 import Footer from "@/src/components/Footer";
 import MulaiButton from "@/src/components/Mulai";
 import "@/src/styles/home.css";
+import Royyan from "@/public/royyan.jpg"
+import Alikha from "@/public/alikha.jpg"
+import type { StaticImageData } from 'next/image';
 
 export default function Home() {
   return (
@@ -19,7 +22,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center px-8">
             <TeamMemberCard
-              imageSrc=""
+              imageSrc={Royyan}
               name="Royyan Ahmad Z."
               role="Designer"
               introduction="Hi,  こんにちは! Aku Royyan Ahmad Zaydan atau biasa dipanggil Royyan. Aku berasal dari Surabaya, Saat ini aku bersekolah di SMK RUS Kudus, dan tertarik tentang web design, dan graphic design"
@@ -27,10 +30,10 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center px-8 mb-10">
             <TeamMemberCard
-              imageSrc="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto.format&fit=crop&w=880&q=80"
+              imageSrc={Alikha}
               name="Alikha Mutiara H."
               role="Developer"
-              introduction="Yoooo! Aku Alikha Mutiara Hati, temen-temen biasanya manggil aku Alikha. Aku berasal dari Tuban, namun sedang bersekolah di SMK Raden Umar Said Kudus. Obsesiku di dunia web development sungguh besar!"
+              introduction="Yoooo! Aku Alikha Mutiara Hati, temen-temen biasanya manggil aku Alikha. Aku berasal dari Tuban, namun sedang bersekolah di SMK Raden Umar Said Kudus. Aku juga memiliki passion di dunia web development!"
             />
           </div>
         </div>
@@ -46,7 +49,7 @@ function TeamMemberCard({
   role,
   introduction,
 }: {
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   name: string;
   role: string;
   introduction: string;
@@ -56,7 +59,7 @@ function TeamMemberCard({
       <div className="flex items-center flex-col md:flex-row h-full">
         <img
           className="object-cover w-52 h-52 rounded-full border border-[#FDD752] border-8"
-          src={imageSrc}
+          src={typeof imageSrc === 'string' ? imageSrc : imageSrc.src}
           alt={name}
         />
         <div className="mt-8 md:mt-0 md:ml-8 flex-1">
