@@ -10,7 +10,7 @@ export default function Doxxing3() {
         <div className="w-full h-full lg:w-1/2 text-center lg:text-left">
             <h1 className="text-2xl md:text-3xl xl:text-[2.8rem] animate fadeInDown font-bold xl:leading-normal mb-4">Dampak Doxxingg</h1>
             <p className="lg:txt-lg xl:text-xl animate fadeInDown" style={{animationDelay: "0.2s"}}>
-            Walaupun mungkin terlihat hanya masalah kecil, diam-diam doxxing juga dapat menimbulkan dampak buruk yang tidak kita sadari bagi korban yang menjadi sasaran. Praktik ini tidak hanya memengaruhi privasi, tetapi juga dapat:
+            Walaupun mungkin <b>terlihat hanya masalah kecil</b>, diam-diam doxxing juga dapat menimbulkan <u>dampak buruk yang tidak kita sadari</u> bagi korban yang menjadi sasaran. Praktik ini tidak hanya memengaruhi privasi, tetapi juga dapat:
             <br /><br />
             <ol className={'inline-block ml-4 lg:ml-8 list-decimal text-left'}>
                 <li>Membahayakan keamanan fisik korban.</li>
@@ -19,7 +19,7 @@ export default function Doxxing3() {
             </ol>
             <br /><br />
             
-Doxxing berpotensi merugikan privasi, keamanan, dan kesejahteraan korban secara signifikan. Kesadaran akan risiko ini penting, dengan peringatan bahwa doxxing melanggar norma etika online dan dapat berujung pada konsekuensi hukum yang serius.
+<b>Doxxing</b> berpotensi merugikan privasi, keamanan, dan kesejahteraan korban secara signifikan. Kesadaran akan risiko ini penting, dengan peringatan bahwa doxxing melanggar norma etika online dan dapat berujung pada <u>konsekuensi hukum yang serius.</u>
             </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center">

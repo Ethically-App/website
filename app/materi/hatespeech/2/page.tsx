@@ -18,7 +18,7 @@ export default function HateSpeech2() {
                     <li>Bertujuan untuk menyakiti orang lain.</li>
                 </ol>
                 <br /><br />
-               
+                Oleh karena itu, pemahaman terhadap ciri-ciri tersebut penting dalam mengenali dan mengatasi fenomena hate speech guna menciptakan <u>masyarakat yang lebih hormat</u> terhadap keragaman.
             </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center">

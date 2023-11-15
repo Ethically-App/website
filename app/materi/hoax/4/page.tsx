@@ -18,6 +18,7 @@ export default function Hoax4() {
                 <li>Dapatkan informasi dari sumber yang terpercaya dan dapat diverifikasi.</li>
             </ol>
             <br /><br />
+            Dengan melakukan langkah-langkah ini, kita dapat bersama-sama <u>mengurangi dampak penyebaran hoax</u> dan membangun masyarakat yang lebih cerdas secara informasi.
             </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center">

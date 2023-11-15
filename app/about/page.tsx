@@ -33,7 +33,7 @@ export default function Home() {
               imageSrc={Alikha}
               name="Alikha Mutiara H."
               role="Developer"
-              introduction="Yoooo! Aku Alikha Mutiara Hati, temen-temen biasanya manggil aku Alikha. Aku berasal dari Tuban, namun sedang bersekolah di SMK Raden Umar Said Kudus. Aku juga memiliki passion di dunia web development!"
+              introduction="Yoooo! Aku Alikha Mutiara Hati, teman-teman biasanya manggil aku Alikha. Aku berasal dari Tuban, namun sedang bersekolah di SMK Raden Umar Said Kudus. Aku juga memiliki passion di dunia web development!"
             />
           </div>
         </div>

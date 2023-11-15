@@ -18,7 +18,7 @@ export default function Hoax2() {
                     <li>Tidak Dukung Fakta.</li>
                 </ol>
                 <br /><br />
-               
+                Dengan <b>meningkatkan kritisitas</b> terhadap informasi yang diterima dan <b>memastikan verifikasi sumber</b>, kita dapat bersama-sama melawan penyebaran hoaks dan memperkuat kecerdasan informasi di masyarakat.
             </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center">

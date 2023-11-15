@@ -10,9 +10,9 @@ export default function Hoax1() {
         <div className="w-full lg:w-1/2 text-center lg:text-left">
             <h1 className="text-2xl md:text-3xl xl:text-[2.8rem] animate fadeInDown font-bold xl:leading-normal mb-4">Apa itu Hoax?</h1>
             <p className="lg:txt-lg xl:text-xl animate fadeInDown" style={{animationDelay: "0.2s"}}>
-            Hoax adalah suatu informasi palsu atau bohong yang sengaja disebarkan untuk menyesatkan orang dan menciptakan kebingungan di masyarakat. Hoax dapat menyebar melalui berbagai media, termasuk media sosial dan internet. 
+            <b>Hoax adalah suatu informasi palsu</b> atau bohong yang sengaja disebarkan untuk menyesatkan orang dan menciptakan kebingungan di masyarakat. <u>Hoax dapat menyebar melalui berbagai media,</u> termasuk media sosial dan internet. 
                 <br /><br />
-                Kebanyakan hoax dibuat dengan tujuan tertentu, seperti menimbulkan ketakutan, merusak reputasi seseorang atau kelompok, atau bahkan menciptakan kekacauan di masyarakat.
+                Kebanyakan hoax dibuat dengan tujuan tertentu, seperti menimbulkan ketakutan, merusak reputasi seseorang atau kelompok, atau bahkan <u>menciptakan kekacauan</u> di masyarakat.
             </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center">

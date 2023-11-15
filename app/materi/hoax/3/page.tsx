@@ -18,7 +18,7 @@ export default function Hoax3() {
                 <li>Menyebabkan Ketidakpercayaan.</li>
             </ol>
             <br /><br />
-           
+            Dengan demikian, penting bagi masyarakat untuk memahami dampak negatif yang dapat ditimbulkan oleh hoax, serta meningkatkan kesadaran dan <b>kewaspadaan dalam menyaring informasi</b> sebelum dipercayai atau disebarkan.
             </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center">

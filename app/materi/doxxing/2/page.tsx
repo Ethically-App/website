@@ -18,7 +18,7 @@ export default function Doxxing2() {
                     <li>Biasanya dibarengi dengan hate speech.</li>
                 </ol>
                 <br /><br />
-                Praktik ini tidak hanya merugikan privasi, tetapi juga dapat berpotensi mengakibatkan konsekuensi serius terhadap individu yang menjadi korban.
+                Praktik ini tidak hanya merugikan privasi, tetapi juga dapat berpotensi <u>mengakibatkan konsekuensi serius</u> terhadap individu yang menjadi korban.
             </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center">

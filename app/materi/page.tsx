@@ -50,9 +50,9 @@ function MateriCard(
     {nama: string, href: string, locked: boolean}
 ): JSX.Element {
     return (
-        <div className='rounded bg-white shadow-inner shadow-md border-x-64 lg:px-64 hover:shadow-xl md:px-32 sm:px-24 py-24 flex justify-center flex-col'>
+        <div className='rounded bg-white shadow-inner shadow-md border-x-64 lg:px-64 hover:shadow-xl duration-700 md:px-32 sm:px-24 py-24 flex justify-center flex-col'>
             <b className='font-bold lg:text-3xl sm:text-xs md:text-lg text-center'>{nama}</b><br/>
-            <Link href={locked ? "/materi" : href} className={(locked ? "bg-zinc-400" : "bg-yellow-300 hover:bg-yellow-200") + ' max-w-sm flex justify-center text-white py-4 px-8 rounded-md mt-4 margin-auto text-center lg:text-3xl sm:text-xs md:text-lg'}>
+            <Link href={locked ? "/materi" : href} className={(locked ? "bg-zinc-400" : "bg-yellow-300 hover:bg-yellow-200 duration-700") + ' max-w-sm flex justify-center text-white py-4 px-8 rounded-md mt-4 margin-auto text-center lg:text-3xl sm:text-xs md:text-lg'}>
                 {locked ? (<FaLock/>) : "Mulai"}
             </Link>
         </div>

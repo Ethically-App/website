@@ -18,7 +18,7 @@ export default function HateSpeech3() {
                     <li>Selalu konsultasi dengan orang tua untuk tindak lanjut.</li>
                 </ol>
                 <br /><br />
-               
+                Dengan demikian, upaya bersama dalam memahami, mengenali, dan merespons hate speech dapat menciptakan lingkungan yang lebih positif dan <u>mengurangi dampak negatifnya dalam masyarakat.</u>
             </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center">
