@@ -43,7 +43,7 @@ export default function Navigation({ route }: PageNumber) {
     return (
         <nav className="w-full shadow-lg fixed top-0 left-0 z-[10]">
           <div className="bg-white w-full py-6 px-12 lg:px-28 flex justify-start items-center flex-row">
-            <h1 className="text-3xl lg:text-4xl font-bold">ethic<span className="text-yellow-300">ally</span>.</h1>
+            <Link href="/" className="text-3xl lg:text-4xl font-bold">ethic<span className="text-yellow-300">ally</span>.</Link>
 
             <div className={"hidden w-full justify-end items-center flex-row text-lg font-medium " + (route == 0 ? "" : "lg:flex")}>
               <Link href={route === 1 ? "" : "/"} className={route === 1 ? navigationClass.selected : navigationClass.default}>Home</Link>

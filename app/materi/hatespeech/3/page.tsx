@@ -4,7 +4,7 @@ import BullyIcon from '@/src/components/icon/SocialBully';
 export default function HateSpeech3() {
     return (
         <>
-        <Navigation nama={'hatespeech'} back={'2'} next={'4'} />
+        <Navigation nama={'hatespeech'} back={'2'} next={'quiz'} />
         <section className="bg-[url('/bg.svg')] bg-cover bg-center relative z-[2] bg-white w-full h-full min-h-[95vh] px-8 sm:px-32 xl:px-40 py-28 flex justify-start items-center flex-col-reverse lg:flex-row">
     
         <div className="w-full h-full lg:w-1/2 text-center lg:text-left">

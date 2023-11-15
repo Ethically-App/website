@@ -1,11 +1,6 @@
 "use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-
 import { useState, useEffect } from 'react';
-import { FaLock } from "react-icons/fa";
-
 import Navigation from '@/src/components/Navigation';
 import Footer from '@/src/components/Footer';
 import MulaiButton from '@/src/components/Mulai';
@@ -38,19 +33,19 @@ export default function Materi() {
                 
                 <div className={'w-full max-w-screen-lg px-8 pb-28 flex justify-center items-center flex-col md:grid md:grid-cols-2 gap-5'}>
                     <MateriCard nama="Cyberbullying" href="/materi/cyberbullying/1">
-                        Cyberbullying adalah xxx
+                        Cyberbullying adalah pelecehan secara online.
                     </MateriCard>
 
                     <MateriCard nama="Doxxing" href="/materi/doxxing/1" delay=".2s">
-                        Doxxing adalah xxx
+                        Doxxing adalah penyebaran informasi pribadi.
                     </MateriCard>
 
                     <MateriCard nama="Hate Speech" href="/materi/hatespeech/1" delay=".4s">
-                        Hate Speech adalah xxx
+                        Hate Speech adalah ujaran kebencian.
                     </MateriCard>
 
                     <MateriCard nama="Hoax" href="/materi/hoax/1" delay=".6s">
-                        Hoax adalah xxx
+                        Hoax adalah informasi palsu yang disebar.
                     </MateriCard>
                 </div>
             </section>
@@ -66,7 +61,7 @@ function MateriCard(
     return (
         <div className='w-full rounded-xl bg-white shadow-md hover:shadow-lg p-8 py-8 md:py-16 flex justify-center items-center flex-col transition-all animate fadeInUp' style={{animationDelay: delay}}>
             <h1 className='font-bold text-xl sm:text-2xl lg:text-3xl text-center mb-3'>{nama}</h1>
-            <p className={'text-base md:text-lg mb-8'}>{children}</p>
+            <p className={'text-base md:text-lg mb-8 flex justify-center text-center'}>{children}</p>
             <div className={'scale-75 sm:scale-90'}>
                 <MulaiButton link={href} />
             </div>

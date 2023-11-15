@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
+import React from 'react';
+
 type ButtonType = {
     text: string,
     white?: boolean,
@@ -10,7 +12,7 @@ type ButtonType = {
     href?: string,
 }
 
-export default function BackButton({ text, simple = false, white = false, absolute = false, href = "", ...props } : ButtonType) {
+const BackButton = React.forwardRef<HTMLAnchorElement, ButtonType>(({ text, simple = false, white = false, absolute = false, href = "#", ...props }, ref) => {
     const classes = {
         default: 'p-2 px-4 sm:px-6 bg-amber-300 rounded-full text-white text-lg font-medium shadow-lg hover:bg-yellow-300 hover:shadow-xl transition-all duration-300 cursor-pointer ',
         simple: 'bg-amber-300 flex justify-center items-center block text-white shadow-md rounded-full p-2 px-4 hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 cursor-pointer'
@@ -34,4 +36,6 @@ export default function BackButton({ text, simple = false, white = false, absolu
             </Link>
         )
     )
-}
+});
+
+export default BackButton;

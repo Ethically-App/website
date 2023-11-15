@@ -39,10 +39,10 @@ export default function MulaiButton({ navigation = false, simple = false, link =
                 if (link != "") {
                     router.push(link);
 
-                } else {
+                } else if (navigation) {
                     Swal.fire({
-                        title: "Popup Sementara",
-                        text: "wtf are you",
+                        title: "Logout",
+                        text: "Apakah kamu yakin ingin logout?",
                         icon: "warning",
                         confirmButtonText: 'Logout',
                         showCancelButton: true,
@@ -55,6 +55,8 @@ export default function MulaiButton({ navigation = false, simple = false, link =
                             router.push("/");
                         }
                     });
+                } else {
+                    router.push("/materi");
                 }
 
             } else {
@@ -139,16 +141,26 @@ export default function MulaiButton({ navigation = false, simple = false, link =
             (navigation || link != "") ? (
                 simple ? (
                     <a ref={ref2} className={classes.simple + (navigation ? "" : classes.transition)} {...props} >
-                        {link != "" ? "Mulai" : "Dasbor"}
-                        <FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+                        {link != "" ? (
+                            <>
+                              Mulai
+                              <FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" />
+                            </>
+                        ) : "Logout"}
+                    </a>
                 ) : (
                     <a ref={ref1} className={classes.default} {...props} >
-                        {link != "" ? "Mulai" : "Dasbor"}
-                        <FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
+                        {link != "" ? (
+                            <>
+                              Mulai
+                              <FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" />
+                            </>
+                        ) : "Logout"}
+                    </a>
                 )
             ) : (
                 <a ref={ref1} className={classes.default} {...props} >
-                    {link != "" ? "Mulai" : "Dasbor"}
+                    Mulai
                     <FaArrowRight className="inline-block ml-3 -mt-0.5 transition-all" /></a>
             )
         ) : (
