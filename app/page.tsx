@@ -96,6 +96,3 @@ export default function Home() {
     </>
   );
 }
-<div>
-  <i>whit</i>
-</div>;
