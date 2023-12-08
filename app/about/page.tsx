@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import type { StaticImageData } from 'next/image';
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 
 import Navigation from "@/src/components/Navigation";
 import Footer from "@/src/components/Footer";
@@ -37,7 +37,7 @@ export default function Home() {
               image={Alikha}
               name="Alikha Mutiara H."
               role="Developer"
-              introduction="Yoooo! Aku Alikha Mutiara Hati, teman-teman biasanya manggil aku Alikha. Aku berasal dari Tuban, namun sedang bersekolah di SMK Raden Umar Said Kudus. Aku juga memiliki passion di dunia web development!"
+              introduction="Yoooo! Aku Alikha Mutiara Hati, teman-teman biasanya manggil aku Alikha. Aku berasal dari Tuban, sekarang sedang bersekolah di SMK Raden Umar Said Kudus. Aku juga memiliki passion di dunia web development!"
             />
           </div>
         </div>
