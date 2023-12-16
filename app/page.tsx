@@ -86,8 +86,11 @@ export default function Home() {
           className="text-lg lg:text-xl xl:text-2xl animate fadeInDown max-w-lg xl:max-w-xl mb-12"
           style={{ animationDelay: "0.2s" }}
         >
-          Ayo, jadilah remaja yang <b>beretika baik</b> dalam menggunakan media
-          sosial dan internet!
+          Ayo, jadilah remaja yang{" "}
+          <i>
+            <b>beretika baik</b>
+          </i>{" "}
+          dalam menggunakan media sosial dan internet!
         </p>
         <MulaiButton style={{ animationDelay: "0.4s" }} />
       </section>
