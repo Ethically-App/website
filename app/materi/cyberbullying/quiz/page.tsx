@@ -349,8 +349,8 @@ export default function CyberbullyingQuiz() {
             <br/>
             <h2 className={'text-xl md:text-2xl font-medium text-center animate fadeIn'}>Apa pengertian dari cyberbullying?</h2>
             <div className={'w-full max-w-screen-lg mt-8 mx-8 grid gap-4'}>
-              <AnswerPrompt number={1} ref={ans1Page1}>Tindakan melecehkan atau merendahkan seseorang secara online.</AnswerPrompt>
-              <AnswerPrompt number={2} ref={ans2Page1} delay=".2s">Aktivitas bermain game online.</AnswerPrompt>
+              <AnswerPrompt number={1} ref={ans2Page1}>Aktivitas bermain game online.</AnswerPrompt>
+              <AnswerPrompt number={2} ref={ans1Page1} delay=".2s">Tindakan melecehkan atau merendahkan seseorang secara online.</AnswerPrompt>
               <AnswerPrompt number={3} ref={ans3Page1} delay=".4s">Penggunaan media sosial dengan bijak.</AnswerPrompt>
             </div>
           </>
