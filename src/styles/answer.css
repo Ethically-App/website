@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-    
-.answer[selected="true"] {
-    @apply bg-amber-100 pointer-events-none shadow-lg;
-}
+    .answer[selected="true"] {
+        @apply bg-amber-100 pointer-events-none shadow-lg;
+    }
 }
